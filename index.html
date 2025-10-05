@@ -386,58 +386,7 @@
                 }
             });
         });
- <!-- BLOQUE DE JAVASCRIPT AÑADIDO PARA MANEJAR EL ENVÍO CON AJAX/FETCH -->
-    <script>
-        document.getElementById('consultasForm').addEventListener('submit', async function(event) {
-            // 1. Previene el envío por defecto que recarga la página
-            event.preventDefault(); 
-
-            const form = event.target;
-            const submitButton = document.getElementById('submitButton');
-            const loading = document.getElementById('loadingMessage');
-            const success = document.getElementById('successMessage');
-            const error = document.getElementById('errorMessage');
-
-            // Ocultar mensajes de estado y mostrar indicador de carga
-            success.classList.add('hidden');
-            error.classList.add('hidden');
-            loading.classList.remove('hidden');
-            submitButton.disabled = true; 
-
-            try {
-                // 2. Enviar los datos del formulario a Formspree usando Fetch (AJAX)
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: new FormData(form),
-                    headers: {
-                        'Accept': 'application/json' // Necesario para que Formspree envíe la respuesta correcta
-                    }
-                });
-
-                loading.classList.add('hidden');
-
-                if (response.ok) {
-                    // 3. Éxito: Mostrar mensaje de éxito y limpiar el formulario
-                    success.classList.remove('hidden');
-                    form.reset(); 
-                } else {
-                    // 4. Error: Mostrar mensaje de error
-                    const data = await response.json();
-                    console.error('Formspree Error:', data);
-                    error.classList.remove('hidden');
-                    error.innerHTML = '❌ Hubo un error al enviar el formulario. ' + (data.error || 'Intente de nuevo más tarde.');
-                }
-            } catch (e) {
-                // 5. Error de red (problemas de conexión)
-                console.error('Fetch Error:', e);
-                loading.classList.add('hidden');
-                error.classList.remove('hidden');
-            } finally {
-                // 6. Volver a habilitar el botón
-                submitButton.disabled = false;
-            }
-        });
-    </script>
+ 
         // Lógica JavaScript para manejar el formulario (simulada)
         document.getElementById('consultasForm').addEventListener('submit', function(e) {
             e.preventDefault(); // Detener el envío real del formulario
