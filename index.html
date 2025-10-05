@@ -49,6 +49,19 @@
             border: 3px solid #D4AF37;
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
         }
+        /* Estilo para que el select se vea mejor en fondos oscuros */
+        select {
+             /* Esto es necesario para eliminar la flecha por defecto en algunos navegadores */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            /* Añadir un ícono de flecha personalizado para accesibilidad visual */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23D4AF37'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem; /* Asegurar espacio para el ícono */
+        }
     </style>
 </head>
 <body class="bg-deep-dark text-white antialiased">
@@ -62,13 +75,13 @@
                     <!-- El 'flex items-center space-x-3' alinea el logo y el texto -->
                     <a href="#inicio" class="flex items-center space-x-3 text-2xl font-extrabold accent-color nav-link">
                         <!-- INICIO: Logo de la empresa (reemplaza el icono SVG) -->
-                        <img src="logog.jpg" alt="Logo de GEOF Vip Security" class="w-8 h-8 rounded-full object-cover">
+                        <img src="https://placehold.co/32x32/D4AF37/000000?text=GEOF" onerror="this.onerror=null;this.src='https://placehold.co/32x32/D4AF37/000000?text=GEOF';" alt="Logo de GEOF Vip Security" class="w-8 h-8 rounded-full object-cover">
                         <!-- FIN: Logo de la empresa -->
                         <span>GEOF Vip Security</span>
                     </a>
                 </div>
                 <!-- Menú de Navegación -->
-                <div class="flex space-x-8">
+                <div class="hidden sm:flex space-x-8">
                     <a href="#inicio" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Inicio</a>
                     <a href="#quienes-somos" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Quiénes Somos</a>
                     <a href="#servicios" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Servicios</a>
@@ -79,7 +92,6 @@
     </nav>
     
     <!-- Encabezado y Visión -->
-    <!-- Se ajusta el padding superior para compensar la altura del menú fijo -->
     <header id="inicio" class="relative overflow-hidden bg-gray-950 -mt-16">
         <!-- Fondo de imagen simulado con degradado oscuro -->
         <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://placehold.co/1920x800/10172A/ffffff?text=Visión+GEOF');"></div>
@@ -111,8 +123,8 @@
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="fotos/gabrielchaves.jpg" 
-                         alt="Foto de irineoveaolmedo">
+                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=GC"
+                         alt="Foto de Gabriel Chaves" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=GC';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Gabriel Chaves </h3>
@@ -125,8 +137,8 @@
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="fotos\irineoveaolmedo.jpg" 
-                         alt="Foto de irineoveaolmedo">
+                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=IV" 
+                         alt="Foto de Irineo Vea Olmedo" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=IV';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Irineo Vea Olmedo </h3>
@@ -139,13 +151,13 @@
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=RB" 
-                         alt="Foto de Roberto Blanco">
+                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=MB" 
+                         alt="Foto de Marcelo Barros" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=MB';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Marcelo Barros </h3>
-                        <p class="text-lg font-medium text-gray-300 mb-2">precidente de seguridad</p>
-                        <p class="text-gray-400"></p>
+                        <p class="text-lg font-medium text-gray-300 mb-2">Presidente de Seguridad</p>
+                        <p class="text-gray-400">Líder con visión estratégica en la dirección de políticas de seguridad. Centrado en la expansión de la marca GEOF manteniendo la excelencia operativa.</p>
                     </div>
                 </div>
 
@@ -153,8 +165,8 @@
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=AL" 
-                         alt="Foto de Ana Lucía">
+                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=AR" 
+                         alt="Foto de Alejandro Ricatti" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=AR';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Alejandro Ricatti</h3>
@@ -163,34 +175,33 @@
                     </div>
                 </div>
 
-                <!-- Miembro 6: Juan Carlos Febres Velazquez-->
+                <!-- Miembro 5: Juan Carlos Febres Velazquez-->
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="fotos\juanfebresvelazquez.jpg" 
-                         alt="Foto de Diego Gómez">
+                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=JC" 
+                         alt="Foto de Juan Carlos Febres Velazquez" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=JC';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Juan Carlos Febres Velazquez </h3>
-                        <p class="text-lg font-medium text-gray-300 mb-2">Director de capacitacion</p>
-                        <p class="text-gray-400">Analista político y sociologo</p>
+                        <p class="text-lg font-medium text-gray-300 mb-2">Director de Capacitación</p>
+                        <p class="text-gray-400">Analista político y sociologo con enfoque en la formación de equipos de seguridad en protocolos internacionales y dinámica de riesgos sociales.</p>
                     </div>
                 </div>
 
-                 <!-- Miembro 6: Cristian-->
+                <!-- Miembro 6: Cristian-->
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="G:\2documentos\12-GEOFvipSecurity\fotos\juanfebresvelazquez.jpg" 
-                         alt="Foto de Diego Gómez">
+                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=CR" 
+                         alt="Foto de Cristian" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=CR';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Cristian </h3>
-                        <p class="text-lg font-medium text-gray-300 mb-2">Director de Tecnologia</p>
-                        <p class="text-gray-400">Ingeniero</p>
+                        <p class="text-lg font-medium text-gray-300 mb-2">Director de Tecnología</p>
+                        <p class="text-gray-400">Ingeniero especializado en la integración de tecnología de vigilancia, cifrado de comunicaciones y sistemas de monitoreo avanzados para la protección de activos.</p>
                     </div>
                 </div>
-
 
 
             </div>
@@ -275,66 +286,69 @@
 
             <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl">
                 <!-- Formulario de Consultas -->
-               <form id="consultasForm" class="space-y-6" action="https://formspree.io/f/xjkaoabp" method="POST">
+                <form id="consultasForm" class="space-y-6" action="https://formspree.io/f/xjkaoabp" method="POST">
     
-    <div>
-        <label for="nombre" class="block text-sm font-medium text-gray-300">Nombre Completo</label>
-        <input type="text" id="nombre" name="nombre" required
-               class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
-               placeholder="Juan Pérez">
-    </div>
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-300">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required
+                            class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                            placeholder="Juan Pérez">
+                    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-            <label for="email" class="block text-sm font-medium text-gray-300">Correo Electrónico</label>
-            <input type="email" id="email" name="email" required
-                   class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
-                   placeholder="correo@ejemplo.com">
-        </div>
-        <div>
-            <label for="telefono" class="block text-sm font-medium text-gray-300">Teléfono (Opcional)</label>
-            <input type="tel" id="telefono" name="telefono"
-                   class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
-                   placeholder="+52 55 1234 5678">
-        </div>
-    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300">Correo Electrónico</label>
+                            <!-- El campo 'email' es crucial para que Formspree sepa a dónde responder (campo _replyto) -->
+                            <input type="email" id="email" name="email" required
+                                class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                                placeholder="correo@ejemplo.com">
+                        </div>
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-300">Teléfono (Opcional)</label>
+                            <input type="tel" id="telefono" name="telefono"
+                                class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                                placeholder="+52 55 1234 5678">
+                        </div>
+                    </div>
 
-    <div>
-        <label for="servicio" class="block text-sm font-medium text-gray-300">Servicio de Interés Principal</label>
-        <select id="servicio" name="servicio" required
-                class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm appearance-none">
-            <option value="" disabled selected>Seleccione un servicio</option>
-            <option value="Traslados Ejecutivos Seguros">Traslados Ejecutivos Seguros</option>
-            <option value="Custodia Personal">Custodia Personal</option>
-            <option value="Seguridad en Eventos">Seguridad en Eventos</option>
-            <option value="Servicio de Vigilancia">Servicio de Vigilancia</option>
-            <option value="Análisis de Riesgos">Análisis de Riesgos</option>
-            <option value="Asesoría en Seguridad Integral">Asesoría en Seguridad Integral</option>
-            <option value="Consulta General">Consulta General</option>
-        </select>
-    </div>
+                    <div>
+                        <label for="servicio" class="block text-sm font-medium text-gray-300">Servicio de Interés Principal</label>
+                        <!-- Se han eliminado las clases appearance-none y se ha usado CSS para mantener el estilo -->
+                        <select id="servicio" name="servicio" required
+                                class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm">
+                            <option value="" disabled selected>Seleccione un servicio</option>
+                            <option value="Traslados Ejecutivos Seguros">Traslados Ejecutivos Seguros</option>
+                            <option value="Custodia Personal">Custodia Personal</option>
+                            <option value="Seguridad en Eventos">Seguridad en Eventos</option>
+                            <option value="Servicio de Vigilancia">Servicio de Vigilancia</option>
+                            <option value="Análisis de Riesgos">Análisis de Riesgos</option>
+                            <option value="Asesoría en Seguridad Integral">Asesoría en Seguridad Integral</option>
+                            <option value="Consulta General">Consulta General</option>
+                        </select>
+                    </div>
 
-    <div>
-        <label for="mensaje" class="block text-sm font-medium text-gray-300">Mensaje (Describa brevemente su necesidad)</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required
-                  class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
-                  placeholder="Necesito seguridad para un evento corporativo de 3 días en el centro de la ciudad."></textarea>
-    </div>
+                    <div>
+                        <label for="mensaje" class="block text-sm font-medium text-gray-300">Mensaje (Describa brevemente su necesidad)</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required
+                                  class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                                  placeholder="Necesito seguridad para un evento corporativo de 3 días en el centro de la ciudad."></textarea>
+                    </div>
 
-    <button type="submit" id="submitButton"
-            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-gray-900 bg-accent hover-dark-accent transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-accent">
-        Enviar Consulta Confidencial
-    </button>
-    <div id="loadingMessage" class="hidden text-center text-accent font-medium">
-        Enviando... Por favor, espere.
-    </div>
-    <div id="successMessage" class="hidden text-center p-4 bg-gray-800 border-t-2 border-accent rounded-lg text-white font-semibold">
-        ✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto con usted a la brevedad.
-    </div>
-    <div id="errorMessage" class="hidden text-center p-4 bg-red-900 border border-red-700 rounded-lg text-red-300 font-semibold">
-        ❌ Hubo un error al enviar el formulario. Intente de nuevo más tarde.
-    </div>
-</form>
+                    <button type="submit" id="submitButton"
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-gray-900 bg-accent hover-dark-accent transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-accent">
+                        Enviar Consulta Confidencial
+                    </button>
+                    <!-- Indicadores de estado -->
+                    <div id="loadingMessage" class="hidden text-center text-accent font-medium">
+                        Enviando... Por favor, espere.
+                    </div>
+                    <div id="successMessage" class="hidden text-center p-4 bg-gray-700 border-l-4 border-green-500 rounded-lg text-green-300 font-semibold">
+                        ✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto con usted a la brevedad.
+                    </div>
+                    <div id="errorMessage" class="hidden text-center p-4 bg-gray-700 border-l-4 border-red-500 rounded-lg text-red-300 font-semibold">
+                        ❌ Hubo un error al enviar el formulario. Intente de nuevo o verifique su conexión.
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -384,12 +398,12 @@
                 }
             });
         });
- 
-       // Lógica JavaScript CORREGIDA para enviar el formulario a Formspree
+
+       // Lógica JavaScript CORREGIDA para enviar el formulario a Formspree (AJAX/Fetch)
     document.getElementById('consultasForm').addEventListener('submit', async function(e) {
         e.preventDefault(); // Detener el envío estándar del navegador
         
-        // **URL de Formspree CORREGIDA y usada directamente del formulario**
+        // Obtenemos la URL de Formspree desde el atributo action del formulario
         const form = e.target;
         const formspreeUrl = form.action; 
 
@@ -398,7 +412,7 @@
         const successMessage = document.getElementById('successMessage');
         const errorMessage = document.getElementById('errorMessage');
 
-        // 1. Ocultar mensajes previos y deshabilitar botón
+        // 1. Ocultar mensajes previos y preparar el botón
         successMessage.classList.add('hidden');
         errorMessage.classList.add('hidden');
         submitButton.disabled = true;
@@ -413,6 +427,7 @@
                 method: 'POST',
                 body: formData,
                 headers: {
+                    // Importante: Formspree necesita este encabezado para la respuesta JSON
                     'Accept': 'application/json'
                 }
             });
@@ -422,17 +437,16 @@
                 // Éxito
                 successMessage.classList.remove('hidden');
                 form.reset(); // Limpiar el formulario
-
+                
                 // Opcional: Ocultar el mensaje de éxito después de 5 segundos
                 setTimeout(() => {
                     successMessage.classList.add('hidden');
                 }, 5000);
 
             } else {
-                // Error de API/servidor (ej. Formspree rechazó la solicitud)
+                // Error de API/servidor (ej. Formspree rechazó la solicitud o URL incorrecta)
                 errorMessage.classList.remove('hidden');
-                // Puedes imprimir el error en consola para depuración
-                console.error("Error de Formspree. Estado:", response.status);
+                console.error("Error de Formspree. Estado:", response.status, await response.text());
             }
         } catch (error) {
             // Error de red (ej. sin conexión a internet)
@@ -448,3 +462,4 @@
 </script>
 </body>
 </html>
+
