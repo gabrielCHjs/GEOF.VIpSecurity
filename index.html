@@ -275,68 +275,66 @@
 
             <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl">
                 <!-- Formulario de Consultas -->
-                <form id="consultasForm" class="space-y-6" action="https://formspree.io/f/mgvnzolv" method="POST">
-                   
-                    <div>
-                        <label for="nombre" class="block text-sm font-medium text-gray-300">Nombre Completo</label>
-                        <input type="text" id="nombre" name="nombre" required
-                               class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
-                               placeholder="Juan Pérez">
-                    </div>
+               <form id="consultasForm" class="space-y-6" action="https://formspree.io/f/mgvnzolv" method="POST">
+    
+    <div>
+        <label for="nombre" class="block text-sm font-medium text-gray-300">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" required
+               class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+               placeholder="Juan Pérez">
+    </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required
-                                   class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
-                                   placeholder="correo@ejemplo.com">
-                        </div>
-                        <div>
-                            <label for="telefono" class="block text-sm font-medium text-gray-300">Teléfono (Opcional)</label>
-                            <input type="tel" id="telefono" name="telefono"
-                                   class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
-                                   placeholder="+52 55 1234 5678">
-                        </div>
-                    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <label for="email" class="block text-sm font-medium text-gray-300">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required
+                   class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                   placeholder="correo@ejemplo.com">
+        </div>
+        <div>
+            <label for="telefono" class="block text-sm font-medium text-gray-300">Teléfono (Opcional)</label>
+            <input type="tel" id="telefono" name="telefono"
+                   class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                   placeholder="+52 55 1234 5678">
+        </div>
+    </div>
 
-                    <div>
-                        <label for="servicio" class="block text-sm font-medium text-gray-300">Servicio de Interés Principal</label>
-                        <select id="servicio" name="servicio" required
-                                class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm appearance-none">
-                            <option value="" disabled selected>Seleccione un servicio</option>
-                            <option value="Traslados Ejecutivos Seguros">Traslados Ejecutivos Seguros</option>
-                            <option value="Custodia Personal">Custodia Personal</option>
-                            <option value="Seguridad en Eventos">Seguridad en Eventos</option>
-                            <option value="Servicio de Vigilancia">Servicio de Vigilancia</option>
-                            <option value="Análisis de Riesgos">Análisis de Riesgos</option>
-                            <option value="Asesoría en Seguridad Integral">Asesoría en Seguridad Integral</option>
-                            <option value="Consulta General">Consulta General</option>
-                        </select>
-                    </div>
+    <div>
+        <label for="servicio" class="block text-sm font-medium text-gray-300">Servicio de Interés Principal</label>
+        <select id="servicio" name="servicio" required
+                class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm appearance-none">
+            <option value="" disabled selected>Seleccione un servicio</option>
+            <option value="Traslados Ejecutivos Seguros">Traslados Ejecutivos Seguros</option>
+            <option value="Custodia Personal">Custodia Personal</option>
+            <option value="Seguridad en Eventos">Seguridad en Eventos</option>
+            <option value="Servicio de Vigilancia">Servicio de Vigilancia</option>
+            <option value="Análisis de Riesgos">Análisis de Riesgos</option>
+            <option value="Asesoría en Seguridad Integral">Asesoría en Seguridad Integral</option>
+            <option value="Consulta General">Consulta General</option>
+        </select>
+    </div>
 
-                    <div>
-                        <label for="mensaje" class="block text-sm font-medium text-gray-300">Mensaje (Describa brevemente su necesidad)</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required
-                                  class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
-                                  placeholder="Necesito seguridad para un evento corporativo de 3 días en el centro de la ciudad."></textarea>
-                    </div>
+    <div>
+        <label for="mensaje" class="block text-sm font-medium text-gray-300">Mensaje (Describa brevemente su necesidad)</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required
+                  class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                  placeholder="Necesito seguridad para un evento corporativo de 3 días en el centro de la ciudad."></textarea>
+    </div>
 
-                    <button type="submit" id="submitButton"
-                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-gray-900 bg-accent hover-dark-accent transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-accent">
-                        Enviar Consulta Confidencial
-                    </button>
-                    <!-- Indicador de carga y mensaje de éxito (ocultos inicialmente) -->
-                    <div id="loadingMessage" class="hidden text-center text-accent font-medium">
-                        Enviando... Por favor, espere.
-                    </div>
-                    <!-- Mensajes de éxito y error con borde Oro -->
-                    <div id="successMessage" class="hidden text-center p-4 bg-gray-800 border-t-2 border-accent rounded-lg text-white font-semibold">
-                        ✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto con usted a la brevedad.
-                    </div>
-                    <div id="errorMessage" class="hidden text-center p-4 bg-red-900 border border-red-700 rounded-lg text-red-300 font-semibold">
-                        ❌ Hubo un error al enviar el formulario. Intente de nuevo más tarde.
-                    </div>
-                </form>
+    <button type="submit" id="submitButton"
+            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-gray-900 bg-accent hover-dark-accent transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-accent">
+        Enviar Consulta Confidencial
+    </button>
+    <div id="loadingMessage" class="hidden text-center text-accent font-medium">
+        Enviando... Por favor, espere.
+    </div>
+    <div id="successMessage" class="hidden text-center p-4 bg-gray-800 border-t-2 border-accent rounded-lg text-white font-semibold">
+        ✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto con usted a la brevedad.
+    </div>
+    <div id="errorMessage" class="hidden text-center p-4 bg-red-900 border border-red-700 rounded-lg text-red-300 font-semibold">
+        ❌ Hubo un error al enviar el formulario. Intente de nuevo más tarde.
+    </div>
+</form>
             </div>
         </div>
     </section>
@@ -387,73 +385,66 @@
             });
         });
  
-        // Lógica JavaScript para manejar el formulario (simulada)
-        document.getElementById('consultasForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Detener el envío real del formulario
+       // Lógica JavaScript CORREGIDA para enviar el formulario a Formspree
+    document.getElementById('consultasForm').addEventListener('submit', async function(e) {
+        e.preventDefault(); // Detener el envío estándar del navegador
+        
+        // **URL de Formspree CORREGIDA y usada directamente del formulario**
+        const form = e.target;
+        const formspreeUrl = form.action; 
 
-            // El email de destino para la recepción de consultas
-            const targetEmail = "https://formspree.io/f/mgvnzolv"; 
-            
-  method="POST"
+        const submitButton = document.getElementById('submitButton');
+        const loadingMessage = document.getElementById('loadingMessage');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
 
-            const form = e.target;
-            const submitButton = document.getElementById('submitButton');
-            const loadingMessage = document.getElementById('loadingMessage');
-            const successMessage = document.getElementById('successMessage');
-            const errorMessage = document.getElementById('errorMessage');
+        // 1. Ocultar mensajes previos y deshabilitar botón
+        successMessage.classList.add('hidden');
+        errorMessage.classList.add('hidden');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+        loadingMessage.classList.remove('hidden');
 
-            // 1. Ocultar mensajes previos y deshabilitar botón
-            successMessage.classList.add('hidden');
-            errorMessage.classList.add('hidden');
-            submitButton.disabled = true;
-            submitButton.textContent = 'Enviando...';
-            loadingMessage.classList.remove('hidden');
+        const formData = new FormData(form);
 
-            // Simular una llamada a un API o proceso de backend
-            // Aquí se simula un retardo de 1.5 segundos
-            setTimeout(() => {
-                
-                // Obtener datos del formulario para la simulación
-                const formData = new FormData(form);
-                const data = Object.fromEntries(formData.entries());
-
-                // **** NOTA IMPORTANTE:
-                // En un entorno de producción (servidor), esta data se enviaría 
-                // por email a la dirección configurada a continuación.
-                console.log(`--- SIMULACIÓN DE ENVÍO DE FORMULARIO DE GEOF Vip Security ---`);
-                console.log(`** Email de destino configurado: ${targetEmail} **`);
-                console.log(`Datos enviados por el cliente:`);
-                console.log(`Nombre: ${data.nombre}`);
-                console.log(`Email del Cliente: ${data.email}`);
-                console.log(`Servicio de Interés: ${data.servicio}`);
-                console.log(`Mensaje: ${data.mensaje}`);
-                console.log(`-------------------------------------------`);
-
-                // Simulación de éxito (cambiar a 'false' para simular error)
-                const submissionSuccessful = true;
-
-                loadingMessage.classList.add('hidden');
-                submitButton.disabled = false;
-                submitButton.textContent = 'Enviar Consulta Confidencial';
-
-                if (submissionSuccessful) {
-                    // 2. Mostrar mensaje de éxito
-                    successMessage.classList.remove('hidden');
-
-                    // 3. Opcional: Limpiar el formulario
-                    form.reset();
-
-                    // 4. Opcional: Ocultar el mensaje de éxito después de 5 segundos
-                    setTimeout(() => {
-                        successMessage.classList.add('hidden');
-                    }, 5000);
-
-                } else {
-                    // Simulación de error
-                    errorMessage.classList.remove('hidden');
+        // 2. Usar try...catch y fetch para el envío real
+        try {
+            const response = await fetch(formspreeUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
                 }
-            }, 1500);
-        });
-    </script>
+            });
+
+            // 3. Verificar el éxito del envío
+            if (response.ok) {
+                // Éxito
+                successMessage.classList.remove('hidden');
+                form.reset(); // Limpiar el formulario
+
+                // Opcional: Ocultar el mensaje de éxito después de 5 segundos
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+
+            } else {
+                // Error de API/servidor (ej. Formspree rechazó la solicitud)
+                errorMessage.classList.remove('hidden');
+                // Puedes imprimir el error en consola para depuración
+                console.error("Error de Formspree. Estado:", response.status);
+            }
+        } catch (error) {
+            // Error de red (ej. sin conexión a internet)
+            errorMessage.classList.remove('hidden');
+            console.error("Error de conexión:", error);
+        } finally {
+            // 4. Restaurar el estado del botón
+            loadingMessage.classList.add('hidden');
+            submitButton.disabled = false;
+            submitButton.textContent = 'Enviar Consulta Confidencial';
+        }
+    });
+</script>
 </body>
 </html>
