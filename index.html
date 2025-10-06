@@ -62,10 +62,40 @@
             background-size: 1.5em 1.5em;
             padding-right: 2.5rem; /* Asegurar espacio para el ícono */
         }
+        /* Estilo para el mensaje web en construccion */
+        .en-construccion {
+    position: fixed; /* Fija el elemento en la pantalla */
+    top: 0; /* Lo coloca en la parte superior */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgba(30, 144, 255, 0.9); /* Un color azul acuático con transparencia */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Animación para el efecto "flotante" */
+    animation: flotar-suave 4s ease-in-out infinite alternate;
+}
+@keyframes flotar-suave {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px); /* Se mueve 5px hacia abajo sutilmente */
+    }
+}
+￼
+
     </style>
 </head>
 <body class="bg-deep-dark text-white antialiased">
-
+    <!-- mensaje web en construccion -->
+<div class="en-construccion">
+    <span>🚧 WEB EN CONSTRUCCIÓN - VOLVEREMOS PRONTO 🚧</span>
+</div>
     <!-- Barra de Navegación Fija (Sticky Menu) -->
     <nav class="fixed top-0 w-full z-50 bg-gray-950/95 shadow-xl backdrop-blur-sm h-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
