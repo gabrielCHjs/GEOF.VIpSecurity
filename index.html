@@ -126,7 +126,6 @@
                         <span>GEOF Vip Security</span>
                     </a>
                 </div>
-
                 <div class="hidden sm:flex space-x-8">
                     <a href="#inicio" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Inicio</a>
                     <a href="#quienes-somos" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Quiénes Somos</a>
@@ -134,31 +133,9 @@
                     <a href="#nuestros-clientes" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Clientes</a>
                     <a href="#contacto" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Contacto</a>
                 </div>
-
-                <div class="sm:hidden">
-                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Abrir menú principal</span>
-                        <svg class="block h-6 w-6" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <svg class="hidden h-6 w-6" id="menu-icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
             </div>
         </div>
     </nav>
-
-    <div class="sm:hidden hidden absolute top-16 w-full bg-gray-950/95 shadow-2xl backdrop-blur-md pb-4 z-40" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#inicio" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:accent-color transition duration-150">Inicio</a>
-            <a href="#quienes-somos" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:accent-color transition duration-150">Quiénes Somos</a>
-            <a href="#servicios" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:accent-color transition duration-150">Servicios</a>
-            <a href="#nuestros-clientes" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:accent-color transition duration-150">Clientes</a>
-            <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:accent-color transition duration-150">Contacto</a>
-        </div>
-    </div>
     
     <header id="inicio" class="relative overflow-hidden bg-gray-950 -mt-16">
         <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://placehold.co/1920x800/10172A/ffffff?text=Visión+GEOF');"></div>
@@ -451,7 +428,7 @@
                             <p class="text-sm text-gray-400">Dueña, **Bodega Rivas** (Vitivinícola Mendocina).</p>
                         </div>
                     </div>
-
+                    
                     <div class="carousel-item">
                         <div class="flex flex-col items-center">
                             <img class="profile-image w-24 h-24 mb-6" 
@@ -471,110 +448,261 @@
                                 src="https://placehold.co/96x96/1a1a1a/D4AF37?text=FC" 
                                 alt="Foto de Facundo Castro" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=FC';">
                             <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
-                                "Utilizamos los traslados blindados para la gestión de valores. La logística es impecable y la confianza total. El mejor servicio de seguridad en Buenos Aires."
+                                "El servicio de vigilancia móvil para nuestros camiones de alto valor ha reducido drásticamente los riesgos en las rutas. Su monitoreo es 24/7 y la respuesta, inmediata."
                             </p>
                             <p class="text-lg font-semibold accent-color">Facundo Castro</p>
-                            <p class="text-sm text-gray-400">Tesorero Regional, **Grupo Financiero Patria** (Banco Argentino).</p>
+                            <p class="text-sm text-gray-400">Gerente de Logística, **Transportes Patagónicos S.A.** (Logística).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="flex flex-col items-center">
+                            <img class="profile-image w-24 h-24 mb-6" 
+                                src="https://placehold.co/96x96/1a1a1a/D4AF37?text=PV" 
+                                alt="Foto de Patricia Vidal" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=PV';">
+                            <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
+                                "La capacitación que GEOF brindó a nuestro personal fue vital. Nos prepararon para enfrentar situaciones de riesgo con protocolos claros y efectivos. Inversión invaluable."
+                            </p>
+                            <p class="text-lg font-semibold accent-color">Patricia Vidal</p>
+                            <p class="text-sm text-gray-400">Directora de RR.HH., **Petroquímica Delta** (Industria Química).</p>
                         </div>
                     </div>
 
-                    <button id="carousel-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-gray-800/70 hover:bg-accent transition duration-300 text-white z-10">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    </button>
-                    <button id="carousel-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-gray-800/70 hover:bg-accent transition duration-300 text-white z-10">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
+                    <div class="carousel-item">
+                        <div class="flex flex-col items-center">
+                            <img class="profile-image w-24 h-24 mb-6" 
+                                src="https://placehold.co/96x96/1a1a1a/D4AF37?text=GP" 
+                                alt="Foto de Gonzalo Peretti" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=GP';">
+                            <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
+                                "El servicio de protección de la propiedad para nuestra casa de fin de semana ha sido perfecto. Nos da la tranquilidad de que nuestros activos están seguros, incluso a distancia."
+                            </p>
+                            <p class="text-lg font-semibold accent-color">Gonzalo Peretti</p>
+                            <p class="text-sm text-gray-400">Inversor, **Familia Peretti** (Protección Patrimonial Privada).</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="flex flex-col items-center">
+                            <img class="profile-image w-24 h-24 mb-6" 
+                                src="https://placehold.co/96x96/1a1a1a/D4AF37?text=CD" 
+                                alt="Foto de Clara Domínguez" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=CD';">
+                            <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
+                                "El equipo de GEOF nos ayudó a diseñar una estrategia de seguridad completa para nuestra cadena de tiendas. Su enfoque es integral, abarcando desde el robo hormiga hasta el riesgo de incendio."
+                            </p>
+                            <p class="text-lg font-semibold accent-color">Clara Domínguez</p>
+                            <p class="text-sm text-gray-400">Propietaria, **Tiendas El Cóndor** (Retail Argentino).</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="flex flex-col items-center">
+                            <img class="profile-image w-24 h-24 mb-6" 
+                                src="https://placehold.co/96x96/1a1a1a/D4AF37?text=MS" 
+                                alt="Foto de Marcos Sánchez" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=MS';">
+                            <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
+                                "Para nuestro congreso internacional, la seguridad era primordial. El despliegue de GEOF fue silencioso, profesional y altamente efectivo. Se nota que su personal está entrenado para la élite."
+                            </p>
+                            <p class="text-lg font-semibold accent-color">Marcos Sánchez</p>
+                            <p class="text-sm text-gray-400">Coordinador de Eventos, **Cámara de Comercio Arg.** (Cámara Empresarial).</p>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
+            <div class="flex justify-center space-x-2 mt-6" id="carouselIndicators">
+                </div>
         </div>
     </section>
+    <section id="contacto" class="py-16 md:py-24 bg-gray-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Contáctenos para una <span class="accent-color">Evaluación Confidencial</span></h2>
+                <p class="text-lg text-gray-400 mb-8">Un especialista se comunicará con usted en menos de 24 horas para diseñar su plan de protección.</p>
+            </div>
 
-    <footer id="contacto" class="py-12 bg-gray-950 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold accent-color mb-6">Contáctenos</h2>
-            <div class="space-y-4 text-gray-400">
-                <p>📞 **Teléfono:** (11) 5555-GEOF</p>
-                <p>📧 **Email:** info@geofvipsecurity.com</p>
-                <p>📍 **Dirección:** Puerto Madero, CABA, Argentina</p>
+            <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl">
+                <form id="consultasForm" class="space-y-6" action="https://formspree.io/f/mgvnzolv" method="POST">
+                
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-300">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required
+                            class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                            placeholder="Juan Pérez">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required
+                                class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                                placeholder="correo@ejemplo.com">
+                        </div>
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-300">Teléfono (Opcional)</label>
+                            <input type="tel" id="telefono" name="telefono"
+                                class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                                placeholder="+52 55 1234 5678">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="servicio" class="block text-sm font-medium text-gray-300">Servicio de Interés Principal</label>
+                        <select id="servicio" name="servicio" required
+                                class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm">
+                            <option value="" disabled selected>Seleccione un servicio</option>
+                            <option value="Traslados Ejecutivos Seguros">Traslados Ejecutivos Seguros</option>
+                            <option value="Custodia Personal">Custodia Personal</option>
+                            <option value="Seguridad en Eventos">Seguridad en Eventos</option>
+                            <option value="Servicio de Vigilancia">Servicio de Vigilancia</option>
+                            <option value="Análisis de Riesgos">Análisis de Riesgos</option>
+                            <option value="Asesoría en Seguridad Integral">Asesoría en Seguridad Integral</option>
+                            <option value="Consulta General">Consulta General</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="mensaje" class="block text-sm font-medium text-gray-300">Mensaje (Describa brevemente su necesidad)</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required
+                            class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                            placeholder="Necesito seguridad para..."></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit"
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-lg font-medium text-gray-900 bg-accent hover-dark-accent transition duration-300">
+                            Enviar Consulta Confidencial
+                        </button>
+                    </div>
+                </form>
+                <p id="formSuccessMessage" class="mt-4 text-center text-green-400 font-semibold hidden">
+                    ¡Gracias! Su mensaje ha sido enviado y un especialista se comunicará pronto.
+                </p>
+                <p id="formErrorMessage" class="mt-4 text-center text-red-400 font-semibold hidden">
+                    Ocurrió un error al enviar el mensaje. Por favor, inténtelo de nuevo o contáctenos directamente.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 border-t border-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold accent-color mb-4">GEOF Vip Security</h3>
+                    <p class="text-gray-400 mb-4">Seguridad Integral de Élite. Su tranquilidad, nuestra misión más importante.</p>
+                    <p class="text-gray-300 mt-2"><span class="accent-color font-semibold">Email:</span> contacto@geofvipsecurity.com</p>
+                    <p class="text-gray-300"><span class="accent-color font-semibold">Teléfono:</span> +54 9 11 XXXX-XXXX</p>
                 </div>
-            <div class="mt-8 pt-6 border-t border-gray-800">
-                <p class="text-sm text-gray-500">&copy; 2024 GEOF Vip Security. Todos los derechos reservados.</p>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Nuestros Servicios</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#servicios" class="hover:accent-color transition duration-150">Custodia Personal</a></li>
+                        <li><a href="#servicios" class="hover:accent-color transition duration-150">Traslados Ejecutivos</a></li>
+                        <li><a href="#servicios" class="hover:accent-color transition duration-150">Análisis de Riesgos</a></li>
+                        <li><a href="#servicios" class="hover:accent-color transition duration-150">Vigilancia Corporativa</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Síganos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="accent-color hover:text-white transition duration-150" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.528-4 0v5.604h-3v-11h3v1.765c1.395-2.535 6-2.235 6 3.534v5.701z"/></svg>
+                        </a>
+                        <a href="#" class="accent-color hover:text-white transition duration-150" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07c3.275.148 4.673 1.636 4.848 4.846.058 1.265.069 1.645.069 4.854 0 3.204-.012 3.584-.07 4.85-.148 3.276-1.636 4.673-4.846 4.848-1.265.058-1.645.069-4.854.069s-3.584-.012-4.85-.07c-3.275-.148-4.673-1.636-4.848-4.846-.058-1.265-.069-1.645-.069-4.854 0-3.204.012-3.584.07-4.85.148-3.276 1.636-4.673 4.846-4.848 1.265-.058 1.645-.069 4.854-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.354.21-6.177 2.114-6.387 6.389-.059 1.28-.073 1.688-.073 4.948s.014 3.667.072 4.947c.21 4.275 2.114 6.177 6.389 6.387 1.28.059 1.688.073 4.948.073s3.667-.014 4.947-.072c4.275-.21 6.177-2.114 6.387-6.389.059-1.28.073-1.688.073-4.948s-.014-3.667-.072-4.947c-.21-4.275-2.114-6.177-6.387-6.387-1.28-.059-1.688-.073-4.948-.073zm0 5.838c-3.4 0-6.162 2.762-6.162 6.162s2.762 6.162 6.162 6.162 6.162-2.762 6.162-6.162-2.762-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.442.646-1.442 1.442s.646 1.442 1.442 1.442 1.442-.646 1.442-1.442-.646-1.442-1.442-1.442z"/></svg>
+                        </a>
+                        <a href="#" class="accent-color hover:text-white transition duration-150" aria-label="WhatsApp">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 2.5a9.531 9.531 0 00-9.531 9.531c0 1.942.508 3.766 1.464 5.334L2.012 22l4.137-1.077c1.526.852 3.3.131 5.382.131 5.253 0 9.531-4.278 9.531-9.531s-4.278-9.531-9.531-9.531zM17.437 15.656c-.094.25-.563.438-.75.438-.188 0-.375-.094-.656-.281-.281-.281-.75-.938-.875-1.125-.125-.188-.25-.188-.438-.188s-.375.094-.656.438c-.281.281-.563.656-.688.813s-.125.188-.375.094-.75-.281-1.406-.875c-.563-.469-.938-.844-1.125-1.125-.188-.281-.094-.438 0-.625.094-.188.188-.281.281-.469s.188-.375.281-.563.094-.281.094-.469-.094-.375-.281-.563c-.188-.188-.563-.469-.75-.656s-.281-.375-.438-.375-.375 0-.563 0c-.188 0-.469.094-.75.375s-1.125 1.094-1.125 2.656 1.156 2.75 1.313 2.938.875 1.5 2.125 2.063 1.875.469 2.219.469c.344 0 1.031-.125 1.313-.656s.281-.938.281-1.031z"/></svg>
+                        </a>
+                    </div>
+                    <div class="mt-8 text-sm text-gray-500">
+                        <p>&copy; 2025 GEOF Vip Security. Todos los derechos reservados.</p>
+                        <p class="mt-1"><a href="#" class="hover:accent-color">Política de Privacidad</a> | <a href="#" class="hover:accent-color">Términos de Servicio</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-
-
     <script>
-        // --- 1. Lógica del Menú Móvil (Responsividad) ---
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIconOpen = document.getElementById('menu-icon-open');
-        const menuIconClose = document.getElementById('menu-icon-close');
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        const carouselTrack = document.getElementById('clientCarouselTrack');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const indicatorsContainer = document.getElementById('carouselIndicators');
+        let currentIndex = 0;
+        const totalItems = carouselItems.length;
 
-        function toggleMobileMenu() {
-            const isMenuOpen = mobileMenu.classList.toggle('hidden');
-            
-            // Alternar los iconos de hamburguesa y cerrar
-            menuIconOpen.classList.toggle('hidden', !isMenuOpen);
-            menuIconClose.classList.toggle('hidden', isMenuOpen);
+        if (carouselTrack && totalItems > 0) {
+            // 1. Generar indicadores
+            for (let i = 0; i < totalItems; i++) {
+                const indicator = document.createElement('button');
+                indicator.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-700', 'hover:bg-accent', 'transition', 'duration-300');
+                if (i === 0) {
+                    indicator.classList.add('bg-accent'); // Marcador inicial
+                }
+                indicator.addEventListener('click', () => {
+                    moveToSlide(i);
+                });
+                indicatorsContainer.appendChild(indicator);
+            }
+            const indicators = document.querySelectorAll('#carouselIndicators button');
 
-            // Alternar el atributo ARIA para accesibilidad
-            menuButton.setAttribute('aria-expanded', isMenuOpen);
-        }
+            // 2. Función de movimiento del carrusel
+            const moveToSlide = (index) => {
+                if (index >= totalItems) {
+                    currentIndex = 0;
+                } else if (index < 0) {
+                    currentIndex = totalItems - 1;
+                } else {
+                    currentIndex = index;
+                }
+                const offset = -currentIndex * 100;
+                carouselTrack.style.transform = `translateX(${offset}%)`;
 
-        // 1.1. Abrir/Cerrar menú al hacer clic en el botón
-        menuButton.addEventListener('click', toggleMobileMenu);
+                // Actualizar indicadores
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.remove('bg-accent');
+                    indicator.classList.add('bg-gray-700');
+                    if (i === currentIndex) {
+                        indicator.classList.add('bg-accent');
+                        indicator.classList.remove('bg-gray-700');
+                    }
+                });
+            };
 
-        // 1.2. Cerrar menú al hacer clic en cualquier link del menú
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                // Solo cerrar si está visible
-                if (!mobileMenu.classList.contains('hidden')) {
-                    toggleMobileMenu();
+            // 3. Auto-avance (cada 5 segundos)
+            const autoAdvance = () => {
+                moveToSlide(currentIndex + 1);
+            };
+            setInterval(autoAdvance, 5000); // Cambia de slide cada 5 segundos
+
+            // 4. Manejo de Formspree con JavaScript (opcional, pero mejora la UX)
+            const form = document.getElementById('consultasForm');
+            const successMessage = document.getElementById('formSuccessMessage');
+            const errorMessage = document.getElementById('formErrorMessage');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                successMessage.classList.add('hidden');
+                errorMessage.classList.add('hidden');
+
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    successMessage.classList.remove('hidden');
+                    form.reset(); // Limpiar el formulario
+                } else {
+                    errorMessage.classList.remove('hidden');
                 }
             });
-        });
-
-        // --- 2. Lógica del Carrusel/Slider (Clientes) ---
-        const carouselTrack = document.getElementById('clientCarouselTrack');
-        const prevButton = document.getElementById('carousel-prev');
-        const nextButton = document.getElementById('carousel-next');
-        const items = document.querySelectorAll('.carousel-item');
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            // Calcula la distancia de desplazamiento
-            const itemWidth = items[0].clientWidth;
-            const offset = -currentIndex * itemWidth;
-            carouselTrack.style.transform = `translateX(${offset}px)`;
         }
-
-        function nextItem() {
-            currentIndex = (currentIndex + 1) % items.length;
-            updateCarousel();
-        }
-
-        function prevItem() {
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            updateCarousel();
-        }
-
-        nextButton.addEventListener('click', nextItem);
-        prevButton.addEventListener('click', prevItem);
-
-        // Asegurar que el carrusel se inicialice y ajuste al redimensionar la ventana
-        window.addEventListener('resize', updateCarousel);
-        // Inicialización al cargar la página
-        window.addEventListener('load', () => {
-            // Clonar los primeros y últimos elementos para crear un carrusel infinito aparente (opcional)
-            // Por simplicidad, aquí solo se inicializa la posición
-            updateCarousel();
-            
-            // Auto-avance (opcional)
-            setInterval(nextItem, 5000); // Cambia cada 5 segundos
-        });
     </script>
 </body>
 </html>
