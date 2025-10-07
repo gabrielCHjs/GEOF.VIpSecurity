@@ -11,7 +11,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            /* Se añade un pequeño padding superior al body para que el contenido no quede bajo la barra fija */
+            /* Se añade un padding superior al body para que el contenido no quede bajo la barra fija */
             padding-top: 4rem; /* 64px, equivalente a h-16 de la nav bar */
         }
         /* Estilo personalizado para el acento de color (ORO METÁLICO) */
@@ -51,7 +51,7 @@
         }
         /* Estilo para que el select se vea mejor en fondos oscuros */
         select {
-             /* Esto es necesario para eliminar la flecha por defecto en algunos navegadores */
+            /* Esto es necesario para eliminar la flecha por defecto en algunos navegadores */
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -62,43 +62,30 @@
             background-size: 1.5em 1.5em;
             padding-right: 2.5rem; /* Asegurar espacio para el ícono */
         }
-      
+
+        /* --- Estilos del Carrusel/Slider de Clientes --- */
+        .carousel-container {
+            overflow: hidden;
+            width: 100%;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            flex-shrink: 0;
+            width: 100%; /* Cada elemento ocupa todo el ancho del contenedor */
+            padding: 2rem;
+        }
+        /* Fin de estilos personalizados */
+
+        /* NOTA IMPORTANTE: Se elimina el bloque de estilo del mensaje "en-construccion"
+           y el div HTML asociado para corregir el error y mostrar el contenido. */
 
     </style>
 </head>
 <body class="bg-deep-dark text-white antialiased">
-    <!-- mensaje web en construccion -->
-<div class="en-construccion">
-    <span>🚧 WEB EN CONSTRUCCIÓN - VOLVEREMOS PRONTO 🚧</span>
-</div>
-
-      /* Estilo para el mensaje web en construccion */
-    <style>    .en-construccion {
-    position: fixed; /* Fija el elemento en la pantalla */
-    top: 0; /* Lo coloca en la parte superior */
-    left: 0;
-    width: 100%; /* Ocupa todo el ancho */
-    padding: 10px 0;
-    text-align: center;
-    background-color: rgba(30, 144, 255, 0.9); /* Un color azul acuático con transparencia */
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* Animación para el efecto "flotante" */
-    animation: flotar-suave 4s ease-in-out infinite alternate;
-}
-@keyframes flotar-suave {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(5px); /* Se mueve 5px hacia abajo sutilmente */
-    }
-}
-￼
-        </style>
+    
     <!-- Barra de Navegación Fija (Sticky Menu) -->
     <nav class="fixed top-0 w-full z-50 bg-gray-950/95 shadow-xl backdrop-blur-sm h-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
@@ -107,9 +94,9 @@
                 <div class="flex-shrink-0">
                     <!-- El 'flex items-center space-x-3' alinea el logo y el texto -->
                     <a href="#inicio" class="flex items-center space-x-3 text-2xl font-extrabold accent-color nav-link">
-                        <!-- INICIO: Logo de la empresa (reemplaza el icono SVG) -->
+                        <!-- INICIO: Logo de la empresa -->
                         <img src="logog.jpg" onerror="this.onerror=null;this.src='https://placehold.co/32x32/D4AF37/000000?text=GEOF';" alt="Logo de GEOF Vip Security" class="w-8 h-8 rounded-full object-cover">
-                        <!-- FIN:  Logo de la empresa   https://placehold.co/32x32/D4AF37/000000?text=GEOF-->
+                        <!-- FIN: Logo de la empresa -->
                         <span>GEOF Vip Security</span>
                     </a>
                 </div>
@@ -118,6 +105,8 @@
                     <a href="#inicio" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Inicio</a>
                     <a href="#quienes-somos" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Quiénes Somos</a>
                     <a href="#servicios" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Servicios</a>
+                    <!-- Nueva Opción de Menú -->
+                    <a href="#nuestros-clientes" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Clientes</a>
                     <a href="#contacto" class="nav-link text-gray-300 hover:accent-color font-medium transition duration-150">Contacto</a>
                 </div>
             </div>
@@ -152,12 +141,12 @@
 
             <div class="mt-12 space-y-12">
 
-                <!-- Miembro 3: Marcelo Barros  -->
+                <!-- Miembro 3: Marcelo Barros -->
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=MB" 
-                         alt="Foto de Marcelo Barros" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=MB';">
+                            src="https://placehold.co/128x128/1a1a1a/D4AF37?text=MB" 
+                            alt="Foto de Marcelo Barros" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=MB';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Marcelo Barros </h3>
@@ -167,12 +156,12 @@
                 </div>
 
                 
-              <!-- Miembro 1: Gabriel Chaves-->
+                <!-- Miembro 1: Gabriel Chaves-->
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="fotos/gabrielchaves.jpg"
-                         alt="Foto de Gabriel Chaves" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=GC';">
+                            src="fotos/gabrielchaves.jpg"
+                            alt="Foto de Gabriel Chaves" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=GC';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Gabriel Chaves </h3>
@@ -185,14 +174,15 @@
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="irineoveaolmedon.png"
-                         alt="Foto de Irineo Vea Olmedo" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=IV';">
+                            src="irineoveaolmedon.png"
+                            alt="Foto de Irineo Vea Olmedo" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=IV';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Irineo Vea Olmedo </h3>
                         <p class="text-lg font-medium text-gray-300 mb-2">Subdirector de Operaciones</p>
                         <p class="text-gray-400">Licenciado en Tecnología Aplicada a la Seguridad con más de 20 años de trayectoria en seguridad privada y corporativa. 
-                            Experto en la gestión integral de riesgos, protección de activos, custodia de personas y eventos. Destaca su experiencia operativa en la supervisión de unidades blindadas (transporte de valores) y la dirección técnica de consultoras de seguridad líderes en el sector. </div>
+                            Experto en la gestión integral de riesgos, protección de activos, custodia de personas y eventos. Destaca su experiencia operativa en la supervisión de unidades blindadas (transporte de valores) y la dirección técnica de consultoras de seguridad líderes en el sector. </p>
+                    </div>
                 </div>
 
                 
@@ -200,8 +190,8 @@
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=AR" 
-                         alt="Foto de Alejandro Ricatti" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=AR';">
+                            src="https://placehold.co/128x128/1a1a1a/D4AF37?text=AR" 
+                            alt="Foto de Alejandro Ricatti" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=AR';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Alejandro Ricatti</h3>
@@ -214,8 +204,8 @@
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=JC" 
-                         alt="Foto de Juan Carlos Febres Velazquez" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=JC';">
+                            src="https://placehold.co/128x128/1a1a1a/D4AF37?text=JC" 
+                            alt="Foto de Juan Carlos Febres Velazquez" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=JC';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Juan Carlos Febres Velazquez </h3>
@@ -228,8 +218,8 @@
                 <div class="flex flex-col md:flex-row items-center bg-gray-900 p-6 rounded-xl shadow-2xl transition duration-300 card-hover border-l-4 border-accent">
                     <!-- Imagen de Placeholder (128x128) -->
                     <img class="profile-image w-32 h-32 flex-shrink-0 mb-4 md:mb-0 md:mr-6" 
-                         src="https://placehold.co/128x128/1a1a1a/D4AF37?text=CR" 
-                         alt="Foto de Cristian" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=CR';">
+                            src="https://placehold.co/128x128/1a1a1a/D4AF37?text=CR" 
+                            alt="Foto de Cristian" onerror="this.onerror=null;this.src='https://placehold.co/128x128/1a1a1a/D4AF37?text=CR';">
                     
                     <div>
                         <h3 class="text-2xl font-semibold accent-color">Cristian </h3>
@@ -311,6 +301,98 @@
         </div>
     </section>
 
+    <!-- Sección NUEVA: Nuestros Clientes (Carrusel/Slider) -->
+    <section id="nuestros-clientes" class="py-16 md:py-24 bg-deep-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Testimonios de <span class="accent-color">Nuestros Clientes</span></h2>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-12">La seguridad es discreta, por eso compartimos la voz de quienes confían en la metodología GEOF para su tranquilidad.</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="carousel-container bg-gray-900 rounded-xl shadow-2xl relative">
+                <div id="clientCarouselTrack" class="carousel-track">
+                    
+                    <!-- Cliente 1 -->
+                    <div class="carousel-item">
+                        <div class="flex flex-col items-center">
+                            <img class="profile-image w-24 h-24 mb-6" 
+                                src="https://placehold.co/96x96/1a1a1a/D4AF37?text=AC" 
+                                alt="Foto de Andrés Cifuentes" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=AC';">
+                            <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
+                                "El servicio de custodia personal de GEOF es inigualable. La discreción, el profesionalismo y la anticipación de riesgos nos permitieron llevar a cabo negociaciones importantes sin ninguna preocupación."
+                            </p>
+                            <p class="text-lg font-semibold accent-color">Andrés Cifuentes</p>
+                            <p class="text-sm text-gray-400">CEO, TechNova Corp.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cliente 2 -->
+                    <div class="carousel-item">
+                        <div class="flex flex-col items-center">
+                            <img class="profile-image w-24 h-24 mb-6" 
+                                src="https://placehold.co/96x96/1a1a1a/D4AF37?text=LV" 
+                                alt="Foto de Lucía Valdés" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=LV';">
+                            <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
+                                "Contratamos el análisis de riesgos para nuestro complejo industrial. El informe fue exhaustivo, detallado y las soluciones propuestas son de vanguardia. Un verdadero 'Forecasting Operacional'."
+                            </p>
+                            <p class="text-lg font-semibold accent-color">Lucía Valdés</p>
+                            <p class="text-sm text-gray-400">Directora de Operaciones, Grupo Minero Fénix.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cliente 3 -->
+                    <div class="carousel-item">
+                        <div class="flex flex-col items-center">
+                            <img class="profile-image w-24 h-24 mb-6" 
+                                src="https://placehold.co/96x96/1a1a1a/D4AF37?text=MJ" 
+                                alt="Foto de Martín Jauregui" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=MJ';">
+                            <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
+                                "GEOF se encargó de la seguridad de nuestra boda privada. Fueron invisibles, pero la tranquilidad que nos dieron fue total. Sus protocolos son de élite, y su equipo es impecable."
+                            </p>
+                            <p class="text-lg font-semibold accent-color">Martín Jauregui</p>
+                            <p class="text-sm text-gray-400">Inversor y Filántropo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cliente 4 -->
+                    <div class="carousel-item">
+                        <div class="flex flex-col items-center">
+                            <img class="profile-image w-24 h-24 mb-6" 
+                                src="https://placehold.co/96x96/1a1a1a/D4AF37?text=ES" 
+                                alt="Foto de Elena Soto" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=ES';">
+                            <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
+                                "El servicio de traslados ejecutivos es siempre puntual y seguro. Sentimos que estamos en manos de profesionales que realmente priorizan nuestra integridad y la confidencialidad."
+                            </p>
+                            <p class="text-lg font-semibold accent-color">Elena Soto</p>
+                            <p class="text-sm text-gray-400">Socia Senior, Bufete Legal Soto & Asociados.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cliente 5 -->
+                    <div class="carousel-item">
+                        <div class="flex flex-col items-center">
+                            <img class="profile-image w-24 h-24 mb-6" 
+                                src="https://placehold.co/96x96/1a1a1a/D4AF37?text=RD" 
+                                alt="Foto de Ricardo Díaz" onerror="this.onerror=null;this.src='https://placehold.co/96x96/1a1a1a/D4AF37?text=RD';">
+                            <p class="text-xl italic text-gray-300 mb-4 max-w-2xl">
+                                "Implementamos la asesoría de GEOF para reestructurar nuestro equipo interno de seguridad. La capacitación y los nuevos protocolos han elevado nuestro estándar de protección drásticamente."
+                            </p>
+                            <p class="text-lg font-semibold accent-color">Ricardo Díaz</p>
+                            <p class="text-sm text-gray-400">Gerente de Seguridad Corporativa, Banco Global.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Indicadores de punto (opcional, pero útil para carruseles) -->
+            <div class="flex justify-center space-x-2 mt-6" id="carouselIndicators">
+                <!-- Los indicadores se generarán con JS -->
+            </div>
+        </div>
+    </section>
+    <!-- FIN de la Sección NUEVA: Nuestros Clientes -->
+
+
     <!-- Sección de Formulario de Contacto -->
     <section id="contacto" class="py-16 md:py-24 bg-gray-950">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -365,8 +447,8 @@
                     <div>
                         <label for="mensaje" class="block text-sm font-medium text-gray-300">Mensaje (Describa brevemente su necesidad)</label>
                         <textarea id="mensaje" name="mensaje" rows="4" required
-                                  class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
-                                  placeholder="Necesito seguridad para un evento corporativo de 3 días en el centro de la ciudad."></textarea>
+                                    class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-accent focus:border-accent shadow-sm"
+                                    placeholder="Necesito seguridad para un evento corporativo de 3 días en el centro de la ciudad."></textarea>
                     </div>
 
                     <button type="submit" id="submitButton"
@@ -398,6 +480,7 @@
                     <a href="#inicio" class="nav-link text-gray-400 hover:text-accent mx-3 transition duration-150">Inicio</a>
                     <a href="#quienes-somos" class="nav-link text-gray-400 hover:text-accent mx-3 transition duration-150">Quiénes Somos</a>
                     <a href="#servicios" class="nav-link text-gray-400 hover:text-accent mx-3 transition duration-150">Servicios</a>
+                    <a href="#nuestros-clientes" class="nav-link text-gray-400 hover:text-accent mx-3 transition duration-150">Clientes</a>
                     <a href="#contacto" class="nav-link text-gray-400 hover:text-accent mx-3 transition duration-150">Contacto</a>
                 </div>
             </div>
@@ -413,7 +496,7 @@
         </svg>
     </a>
 
-    <!-- Lógica JavaScript para manejar el formulario (simulada) y el scroll suave -->
+    <!-- Lógica JavaScript para manejar el formulario (simulada), el scroll suave y el nuevo carrusel -->
     <script>
         // Lógica de Scroll Suave para la Navegación
         document.querySelectorAll('.nav-link').forEach(anchor => {
@@ -434,67 +517,132 @@
             });
         });
 
-       // Lógica JavaScript CORREGIDA para enviar el formulario a Formspree (AJAX/Fetch)
-    document.getElementById('consultasForm').addEventListener('submit', async function(e) {
-        e.preventDefault(); // Detener el envío estándar del navegador
-        
-        // Obtenemos la URL de Formspree desde el atributo action del formulario
-        const form = e.target;
-        const formspreeUrl = form.action; 
+        // Lógica JavaScript para enviar el formulario a Formspree (AJAX/Fetch)
+        document.getElementById('consultasForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Detener el envío estándar del navegador
+            
+            // Obtenemos la URL de Formspree desde el atributo action del formulario
+            const form = e.target;
+            const formspreeUrl = form.action; 
 
-        const submitButton = document.getElementById('submitButton');
-        const loadingMessage = document.getElementById('loadingMessage');
-        const successMessage = document.getElementById('successMessage');
-        const errorMessage = document.getElementById('errorMessage');
+            const submitButton = document.getElementById('submitButton');
+            const loadingMessage = document.getElementById('loadingMessage');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
 
-        // 1. Ocultar mensajes previos y preparar el botón
-        successMessage.classList.add('hidden');
-        errorMessage.classList.add('hidden');
-        submitButton.disabled = true;
-        submitButton.textContent = 'Enviando...';
-        loadingMessage.classList.remove('hidden');
+            // 1. Ocultar mensajes previos y preparar el botón
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+            loadingMessage.classList.remove('hidden');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+            submitButton.classList.add('opacity-50', 'cursor-not-allowed');
 
-        const formData = new FormData(form);
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(formspreeUrl, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
 
-        // 2. Usar try...catch y fetch para el envío real
-        try {
-            const response = await fetch(formspreeUrl, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    // Importante: Formspree necesita este encabezado para la respuesta JSON
-                    'Accept': 'application/json'
+                if (response.ok) {
+                    // Éxito
+                    successMessage.classList.remove('hidden');
+                    form.reset(); // Limpiar el formulario
+                } else {
+                    // Error de Formspree o de red
+                    errorMessage.classList.remove('hidden');
+                }
+            } catch (error) {
+                // Error de conexión
+                console.error('Error al enviar el formulario:', error);
+                errorMessage.classList.remove('hidden');
+            } finally {
+                // 3. Restaurar estado inicial del botón
+                loadingMessage.classList.add('hidden');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar Consulta Confidencial';
+                submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+
+        // --- Lógica del Carrusel/Slider de Clientes ---
+
+        const track = document.getElementById('clientCarouselTrack');
+        const items = document.querySelectorAll('.carousel-item');
+        const indicatorsContainer = document.getElementById('carouselIndicators');
+        const totalItems = items.length;
+        let currentIndex = 0;
+        const intervalTime = 6000; // 6 segundos por diapositiva
+
+        // Función para generar los indicadores de navegación (puntos)
+        function createIndicators() {
+            items.forEach((_, index) => {
+                const indicator = document.createElement('button');
+                indicator.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-600', 'transition', 'duration-300', 'focus:outline-none');
+                
+                // Marcar el primer indicador como activo
+                if (index === 0) {
+                    indicator.classList.remove('bg-gray-600');
+                    indicator.classList.add('bg-accent');
+                }
+
+                indicator.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                indicatorsContainer.appendChild(indicator);
+            });
+        }
+
+        // Función principal para mover el carrusel a un índice específico
+        function goToSlide(index) {
+            currentIndex = index;
+            // Aseguramos que el índice no se salga de los límites
+            if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalItems - 1;
+            }
+
+            // Mueve el track usando la propiedad transform: translateX()
+            const offset = -currentIndex * 100;
+            track.style.transform = `translateX(${offset}%)`;
+
+            // Actualiza los indicadores
+            updateIndicators();
+        }
+
+        // Función para actualizar los indicadores visuales
+        function updateIndicators() {
+            const indicators = indicatorsContainer.querySelectorAll('button');
+            indicators.forEach((indicator, index) => {
+                if (index === currentIndex) {
+                    indicator.classList.remove('bg-gray-600');
+                    indicator.classList.add('bg-accent');
+                } else {
+                    indicator.classList.remove('bg-accent');
+                    indicator.classList.add('bg-gray-600');
                 }
             });
-
-            // 3. Verificar el éxito del envío
-            if (response.ok) {
-                // Éxito
-                successMessage.classList.remove('hidden');
-                form.reset(); // Limpiar el formulario
-                
-                // Opcional: Ocultar el mensaje de éxito después de 5 segundos
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 5000);
-
-            } else {
-                // Error de API/servidor (ej. Formspree rechazó la solicitud o URL incorrecta)
-                errorMessage.classList.remove('hidden');
-                console.error("Error de Formspree. Estado:", response.status, await response.text());
-            }
-        } catch (error) {
-            // Error de red (ej. sin conexión a internet)
-            errorMessage.classList.remove('hidden');
-            console.error("Error de conexión:", error);
-        } finally {
-            // 4. Restaurar el estado del botón
-            loadingMessage.classList.add('hidden');
-            submitButton.disabled = false;
-            submitButton.textContent = 'Enviar Consulta Confidencial';
         }
-    });
-</script>
+
+        // Función para avanzar automáticamente
+        function autoAdvance() {
+            currentIndex++;
+            goToSlide(currentIndex);
+        }
+
+        // Inicializar carrusel
+        window.addEventListener('load', () => {
+            createIndicators();
+            // Iniciar el avance automático
+            setInterval(autoAdvance, intervalTime);
+        });
+
+    </script>
 </body>
 </html>
 
