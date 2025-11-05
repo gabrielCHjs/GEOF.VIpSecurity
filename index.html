@@ -133,7 +133,25 @@
 }
 
         /* Fin de mensaje flotante */
+        /* Código CSS para la animación slider */
 
+<style>
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
+</style>
 
 
     </style>
