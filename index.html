@@ -240,7 +240,8 @@ a img {
   const iconPlay = document.getElementById('icon-play');
   const iconPause = document.getElementById('icon-pause');
   let isPlaying = false;
-
+ // 🔉 Establecer volumen al 40%
+  music.volume = 0.4;
   toggleBtn.addEventListener('click', () => {
     if (isPlaying) {
       music.pause();
