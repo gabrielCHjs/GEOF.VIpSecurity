@@ -242,6 +242,23 @@ a img {
   let isPlaying = false;
  // 🔉 Establecer volumen al 40%
   music.volume = 0.4;
+    //  autoplay — este intento se asegura de iniciarlo
+  window.addEventListener('load', () => {
+    const playPromise = music.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          iconPlay.classList.add('hidden');
+          iconPause.classList.remove('hidden');
+        })
+        .catch(() => {
+          // Si el navegador bloquea autoplay, se muestra el botón en modo "play"
+          isPlaying = false;
+          iconPlay.classList.remove('hidden');
+          iconPause.classList.add('hidden');
+        });
+    }
+  });
   toggleBtn.addEventListener('click', () => {
     if (isPlaying) {
       music.pause();
